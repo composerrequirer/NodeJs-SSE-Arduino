@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp right now</title>
+</head>
+<body>
+    <div class="container">
+        <p class="temperature">The temperatur today is: <span class="temp-cont"></span>°c</p>
+    </div>
+
+    <script>
+        let span = document.querySelector(".temp-cont");
+        let source = new EventSource("/events");
+        source.onmessage = (message) =>{
+            // console.log(message.data);
+            span.textContent = message.data;
+        }
+
+    </script>
+</body>
+</html>
