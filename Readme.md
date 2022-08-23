@@ -2,7 +2,7 @@
 
 ## Objective:
 In this code we are using the `serialport` library to wait for temperature update from arudino and then
-we send this update to the UI by and SSE. 
+we send this update to the UI by an SSE. 
 
 ## Arduino code:
    ```cpp
